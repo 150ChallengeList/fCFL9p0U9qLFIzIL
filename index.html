@@ -1,18 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Matchmaking Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Snowfall Background</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Matchmaking Admin Dashboard</h1>
-        <button id="loadProfilesBtn">Load Profiles</button>
-        <div id="profilesContainer"></div>
-        <a href="/logout">Logout</a> <!-- Add a logout link -->
+  <!-- Navbar -->
+  <div class="navbar">
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">FEATURES</a></li>
+      <li><a href="#">REVIEWS</a></li>
+      <li><a href="#">INFO</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <h1>skittlz.xyz</h1>
+    <div class="decorative-line"></div>
+    <p>Improve your gaming experience to the best</p>
+  </div>
+  <!-- Separator Line for Reviews -->
+  <div class="separator-line"></div>
+
+  <!-- Features Section -->
+  <div class="features-section">
+    <div class="features-header">
+      <h2>Exclusive Features</h2>
+      <p class="price">$49.99</p>
     </div>
-    <script src="script.js"></script>
+
+    <div class="tier-selector">
+      <button class="arrow" id="prevArrow">&#8592;</button>
+      <div class="gradient"></div>
+      <div class="tier-carousel">
+        <div class="tier" id="tier1">
+          <h3>Free</h3>
+          <p>$0.00</p>
+          <div class="features">
+            <ul>
+                <li>✔️ Access to the software</li>
+                <li>✔️ Unique features</li>
+                <li>❌ All games</li>
+                <li>❌ All functions</li>
+                <li>❌ Faster updates</li>
+                <li>❌ Premium features</li>
+                <li>❌ Support priority</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tier" id="tier2">
+          <h3>Standard</h3>
+          <p>$9.99</p>
+          <div class="features">
+            <ul>
+                <li>✔️ Access to the software</li>
+                <li>✔️ Unique features</li>
+                <li>✔️ All games</li>
+                <li>✔️ All functions</li>
+                <li>✔️ Faster updates</li>
+                <li>❌ Premium features</li>
+                <li>❌ Support priority</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tier" id="tier3">
+          <h3>Premium</h3>
+          <p>$15.99</p>
+          <div class="features">
+            <ul>
+                <li>✔️ Access to the software</li>
+                <li>✔️ Unique features</li>
+                <li>✔️ All games</li>
+                <li>✔️ All functions</li>
+                <li>✔️ Faster updates</li>
+                <li>✔️ Premium features</li>
+                <li>✔️ Support priority</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <button class="arrow" id="nextArrow">&#8594;</button>
+    </div>
+  </div>
+
+  <!-- Separator Line for Reviews -->
+  <div class="separator-line"></div>
+
+  <!-- Reviews Section -->
+  <section class="reviews-section">
+    <div class="review-card">
+      <img src="user1.jpg" alt="User 1" class="profile-pic">
+      <div class="review-content">
+        <h3>Username1</h3>
+        <p>“This is a game-changer! My experience has improved significantly.”</p>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <img src="user2.jpg" alt="User 2" class="profile-pic">
+      <div class="review-content">
+        <h3>Username2</h3>
+        <p>“Absolutely love it! It really enhances gameplay.”</p>
+        <div class="stars">★★★★☆</div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <img src="user3.jpg" alt="User 3" class="profile-pic">
+      <div class="review-content">
+        <h3>Username3</h3>
+        <p>“Great product, would highly recommend!”</p>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+  </section>
+
+  <canvas id="snowCanvas"></canvas>
+  <script src="script.js"></script>
 </body>
 </html>
